@@ -1,0 +1,19 @@
+{
+  "name": "cc1",
+  "version": "0.1.0",
+  "description": "First graded exercise for the Clean Code Course - 4ESGI 2021-2022",
+  "main": "bin/api/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Paolo Manaois 4ESGI3",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.12",
+    "jest": "^27.4.4",
+    "ts-jest": "^27.1.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.3"
+  }
+}
