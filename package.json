@@ -4,6 +4,7 @@
   "description": "First graded exercise for the Clean Code Course - 4ESGI 2021-2022",
   "main": "bin/api/index.js",
   "scripts": {
+    "start": "ts-node ./src/index.ts",
     "test": "jest"
   },
   "author": "Paolo Manaois 4ESGI3",
