@@ -33,6 +33,12 @@ export class SameDivisors extends CustomError {
     }
 }
 
+export class NotPrimeDivisor extends CustomError {
+    constructor() {
+        super("Divisor should be prime");
+    }
+}
+
 export function fizzbuzz(divisors: Divisors = [3, 5], num: number): string {
     if (num <= 0) {
         throw new NegativeInput();
@@ -45,6 +51,10 @@ export function fizzbuzz(divisors: Divisors = [3, 5], num: number): string {
 
     if (divisor1 <= 0 || divisor2 <= 0) {
         throw new NegativeDivisor();
+    }
+
+    if (!isPrime(divisor1) || !isPrime(divisor2)) {
+        throw new NotPrimeDivisor();
     }
 
     if (divisor1 === divisor2) {
@@ -69,4 +79,13 @@ export function fizzbuzz(divisors: Divisors = [3, 5], num: number): string {
     }
 
     return result.trimEnd();
+}
+
+function isPrime(num: number): boolean {
+    for(let i = 2; i < num; i++) {
+        if (num % i === 0){
+            return true;
+        }
+    }
+    return false;
 }
